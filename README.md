@@ -3,18 +3,13 @@
 Technical test built with a **simplified MERN stack** under a tight deadline.  
 The goal was to build a backend with Express + MongoDB, a React frontend, and consume data from an external API (OpenAQ).
 
-Beyond just meeting the requirements, my intention was to demonstrate that I could set up an **end-to-end project**, connect all the moving parts, and have it running online in just a few hours.
+Beyond just meeting the requirements, my intention was to demonstrate that I could set up an **end-to-end project**, connect all the moving parts, and have it running in just a few hours.
 
 ---
 
-## 🌐 Online Demo
+## Running the project
 
-The project can be tested directly here:
-
-➡️ [Backend on Render](https://mern-airquality-api.onrender.com)  
-➡️ [Frontend on Vercel](https://mern-airquality-demo.vercel.app/)
-
-> Note: Render puts the backend to sleep after inactivity. It’s necessary to open the backend first to “wake up” the service and then access the frontend.
+You can set up and run the project locally. Follow the [local setup instructions](#local-setup) below.
 
 ---
 
@@ -65,14 +60,6 @@ npm run dev
 - `POST /api/items` → creates a new item.  
 - `GET /api/airquality?lat=<lat>&lon=<lon>` → returns nearby monitoring stations with measured parameters.
 
-### Deployment
-
-The backend is deployed on **Render**, chosen because it allows going from repo to live API in minutes and has a sufficient free tier:
-
-```
-https://inbiot-fullstack-test.onrender.com
-```
-
 ### Unit tests
 
 Includes **basic tests** with **Jest** and **Supertest** in `server/tests/`:
@@ -108,14 +95,6 @@ npm install
 npm run dev
 ```
 
-### Deployment
-
-The frontend is deployed on **Vercel**, which I was already using for personal projects:
-
-```
-https://inbiot-fullstack-test.vercel.app
-```
-
 ---
 
 ## ⚙️ Technical decisions
@@ -124,9 +103,10 @@ https://inbiot-fullstack-test.vercel.app
 - **React + Vite**: I already knew React, and Vite makes setup and environment variables easier.  
 - **MongoDB Atlas (NoSQL)**: I came from SQL, but the test required NoSQL. I chose MongoDB over Firestore because it offers more flexibility in validations and because I wanted to try the full MERN stack.  
 - **Mongoose**: centralizes validation in the model instead of repeating it in every endpoint.  
-- **Render + Vercel**: fast deployment, free tier, and `.env` support.  
 
 ---
+
+<a id="local-setup"></a>
 
 ## ▶️ How to run the project locally
 
